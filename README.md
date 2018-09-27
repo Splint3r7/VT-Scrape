@@ -30,7 +30,7 @@ $ sudo apt-get install jq
 
 #### Example
 ```
-leafpad vt-scrape.sh
+$ leafpad vt-scrape.sh
 ```
 3. Replace the API key with apikey=$<Your_API_KEY>$
 4. Save the file
