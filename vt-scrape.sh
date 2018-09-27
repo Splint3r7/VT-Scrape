@@ -42,7 +42,6 @@ fi
 
 if [[ $1 == '-d' ]] || [[ $1 == '--domain' ]]; then
 	logo
-	echo -e "${YELLOW}[i]${NC} Looking URL's to fetch ..."
 	d=$2
 	mkdir -p output/$d
 	virustotal
