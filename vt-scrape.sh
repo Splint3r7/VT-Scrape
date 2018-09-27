@@ -35,7 +35,7 @@ if [[ $d == '' ]]; then
 fi
 
 if [[ $d != '' ]]; then
-	curl -s --request GET --url "https://www.virustotal.com/vtapi/v2/domain/report?apikey=66725dde43656c331e1160295f3769eff10d675d91e3b1913e101223aff5818a&domain=${d}"| jq --raw-output -r '.undetected_urls[]? | .[]'|grep 'http' > output/$d/$d-$(date +"%Y-%m-%d").txt
+	curl -s --request GET --url "https://www.virustotal.com/vtapi/v2/domain/report?apikey=<YOUR_API_KEY>&domain=${d}"| jq --raw-output -r '.undetected_urls[]? | .[]'|grep 'http' > output/$d/$d-$(date +"%Y-%m-%d").txt
 	
 fi
 }
