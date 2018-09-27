@@ -37,6 +37,6 @@ leafpad vt-scrape.sh
 
 ### OUTPUT
 
-Ouput will be stored in output/site_name/site_name.txt. This text file will contain all the url's extracted from the Virustotal API in the text format.
+Output will be stored in output/site_name/site_name.txt. This text file will contain all the URL's extracted from the Virustotal API in the text format.
   
 #### Thanks for using the tool!
