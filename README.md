@@ -5,7 +5,7 @@ A tool that uses the API of https://www.virustotal.com to find the URL's that ca
 
 ```
 $./vt-scrape.sh
-Usage: ./VT-scrape.sh -d <domain>
+Usage: ./vt-scrape.sh -d <domain>
 ```
 ### Example
 
