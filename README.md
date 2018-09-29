@@ -26,13 +26,13 @@ $ sudo apt-get install jq
 ### Api_key
 
 1. Grab your API_KEY from virus total account.
-2. Put this API_KEY in vt-scrape.sh
+2. open vt-scrape.sh in your favourite editor.
 
 #### Example
 ```
 $ leafpad vt-scrape.sh
 ```
-3. Replace the API key with Variable API_KEY=<Your_API_KEY>
+3. Paste the API_KEY in variable API_KEY="Your_API_KEY"
 4. Save the file.
 
 ### Output
