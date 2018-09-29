@@ -32,11 +32,11 @@ $ sudo apt-get install jq
 ```
 $ leafpad vt-scrape.sh
 ```
-3. Replace the API key with apikey=$<Your_API_KEY>$
-4. Save the file
+3. Replace the API key with Variable API_KEY=<Your_API_KEY>
+4. Save the file.
 
 ### Output
 
 Output will be stored in output/site_name/site_name.txt. This text file will contain all the URL's extracted from the Virustotal API in the text format.
   
-#### Thanks for using the tool!
+### Enjoy using tool.
