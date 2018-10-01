@@ -1,4 +1,5 @@
 #!/bin/bash
+
 RED='\033[0;31m'
 BWhite='\033[1;37m'
 GREEN="\033[0;32m"
@@ -6,8 +7,12 @@ RESET="\033[0m"
 NC='\033[0m'
 YELLOW="\033[0;33m"
 
+if [[ ! -x "$(which jq)" ]]; then
+	echo -e "You need to install jq to run this tool \ntry: sudo apt-get install jq"
+	exit 1
+fi
+
 logo(){
-#Addicted to add logos xD
 	echo -e """
 ${GREEN}
 ##     ## ########          ######   ######  ########     ###    ########  ######## 
@@ -29,7 +34,7 @@ fi
 
 virustotal(){
 
-API_KEY="Enter_API_KEY_HERE"
+API_KEY="$(<config-api-key.txt)"
 
 if [[ $d == '' ]]; then
 	echo -e "${YELLOW}[i]${NC}${RED} Missing argument try:${NC} ./VT-scrape.sh -d <domain>"
@@ -49,7 +54,7 @@ if [[ $1 == '-d' ]] || [[ $1 == '--domain' ]] || [[ $d != '' ]] ; then
 	virustotal
 	count=$(wc -l output/$d/$d-$(date +"%Y-%m-%d").txt | cut -d ' ' -f1)
 	if [[ $count > 0 ]]; then
-		echo -e "${BWhite}[${NC}${count}${BWhite}]${NC} ${YELLOW}URLs fetched in ${GREEN}output/$d${NC}!${NC}"
+		echo -e "Total URLs found: ${BWhite}[${NC}${count}${BWhite}]${NC} ${YELLOW} \nOutput stored in: ${GREEN}output/$d${NC}${NC}"
 	elif [[ $count = 0 ]]; then
 		echo -e "${YELLOW}[i]${NC} No URLs found for ${GREEN}$d${NC}"
 	fi
